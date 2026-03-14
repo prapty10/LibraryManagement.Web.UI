@@ -1,8 +1,97 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Banner -->
+<div class="banner position-relative text-white text-center" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.65)), url('/images/banner1.jpg'); height: 60vh; background-size: cover; background-position: center;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+        <div>
+            <h1 class="display-4 fw-bold" style="color:#F8F9FA;">Welcome to Our Library</h1>
+            <p class="lead" style="color:#E9ECEF;">Explore Knowledge, Unlock Potential</p>
+            <a href="#cardsSection" class="btn btn-gradient btn-lg mt-3">Get Started</a>
+        </div>
+    </div>
 </div>
+
+<!-- Cards Section -->
+<div class="container my-5" id="cardsSection">
+    <h2 class="text-center mb-5 fw-bold" style="color:#343A40;">Manage Students, Books & Librarians Efficiently</h2>
+    <div class="row g-4">
+        <!-- Card 1: Students -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-color-1">
+                <img src="/images/student.jpg" class="card-img-top" alt="Students" style="height:200px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Manage Students</h5>
+                    <p class="card-text flex-grow-1">Easily keep all student records organized and accessible in one place.</p>
+                    <a href="/Student" class="btn btn-light mt-3">Manage Student</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Books -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-color-2">
+                <img src="/images/book1.jpg" class="card-img-top" alt="Books" style="height:200px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Manage Books</h5>
+                    <p class="card-text flex-grow-1">Track and maintain accurate records of all books in your library.</p>
+                    <a href="/Book" class="btn btn-light mt-3">Manage Books</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Librarians -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden card-color-3">
+                <img src="/images/librarian.jpg" class="card-img-top" alt="Librarians" style="height:200px; object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Manage Librarians</h5>
+                    <p class="card-text flex-grow-1">Maintain all librarian records efficiently and keep your team organized.</p>
+                    <a href="/Librarian" class="btn btn-light mt-3">Manage Librarians</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS for professional colors & hover effect -->
+<style>
+    /* Banner button gradient */
+    .btn-gradient {
+        background: linear-gradient(90deg, #495057, #6C757D);
+        color: #fff;
+        border: none;
+        transition: 0.3s;
+    }
+    .btn-gradient:hover {
+        background: linear-gradient(90deg, #6C757D, #495057);
+        color: #fff;
+    }
+
+    /* Card hover */
+    .card:hover {
+        transform: translateY(-6px);
+        transition: all 0.3s ease;
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Professional colored cards */
+    .card-color-1 {
+        background: linear-gradient(135deg, #F1F3F5, #E9ECEF);
+    }
+    .card-color-2 {
+        background: linear-gradient(135deg, #E9ECEF, #DEE2E6);
+    }
+    .card-color-3 {
+        background: linear-gradient(135deg, #DEE2E6, #CED4DA);
+    }
+
+    /* Banner text shadow */
+    .banner h1 {
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .banner p {
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+</style>
